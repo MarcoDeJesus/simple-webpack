@@ -16,10 +16,18 @@ module.exports = {
                     // https://github.com/babel/babel-loader
                     loader: 'babel-loader',
                     // https://babeljs.io/docs/en/babel-preset-env
+                    // https://babeljs.io/docs/en/babel-preset-react
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                 }
+            },
+            {
+                test:/\.css$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'}
+                ]
             }
         ]
     },
