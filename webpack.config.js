@@ -7,6 +7,11 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, "./dist")
     },
+    // https://webpack.js.org/configuration/dev-server/
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        port: 9000
+    },
     module: {
         rules: [
             {
