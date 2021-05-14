@@ -2,9 +2,12 @@ const path = require('path');
 
 // https://webpack.js.org/configuration/
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        about: "./src/about.js",
+        contact: "./src/contact.js"
+    },
     output: {
-        filename: "main.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "./dist")
     },
     // https://webpack.js.org/configuration/dev-server/
