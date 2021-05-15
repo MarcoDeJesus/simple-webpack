@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 const About = () => {
     return(
         <div>
-            <h1>This is About Page</h1>
+            <h1>This is About Pasge</h1>
         </div>
     )
 }

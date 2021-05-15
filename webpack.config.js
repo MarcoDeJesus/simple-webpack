@@ -10,6 +10,14 @@ module.exports = {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "./dist")
     },
+    // https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
+    // https://webpack.js.org/guides/code-splitting/#splitchunksplugin
+
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all',
+    //     },
+    // },
     // https://webpack.js.org/configuration/dev-server/
     devServer: {
         contentBase: path.join(__dirname, "dist"),

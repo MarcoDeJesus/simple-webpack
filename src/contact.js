@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 const Contact = () => {
     return(
         <div>
-            <h1>This is Contact page</h1>
+            <h1>This is Contact paged</h1>
         </div>
     )
 }
