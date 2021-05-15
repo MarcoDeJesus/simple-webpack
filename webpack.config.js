@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglyfyJSPlugin = require ('uglifyjs-webpack-plugin')
 
 // https://webpack.js.org/configuration/
 module.exports = {
@@ -12,11 +13,12 @@ module.exports = {
     // https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
     // https://webpack.js.org/guides/code-splitting/#splitchunksplugin
 
-    // optimization: {
+     optimization: {
     //     splitChunks: {
     //         chunks: 'all',
     //     },
-    // },
+        minimizer: [new UglyfyJSPlugin()],
+     },
     // https://webpack.js.org/configuration/dev-server/
     devServer: {
         contentBase: path.join(__dirname, "dist"),
