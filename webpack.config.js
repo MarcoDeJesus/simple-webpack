@@ -1,15 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // https://webpack.js.org/configuration/
 module.exports = {
-    entry: {
-        about: "./src/about.js",
-        contact: "./src/contact.js"
-    },
+    entry: './src/index.js',
     output: {
-        filename: "[name].bundle.js",
+        filename: "main.js",
         path: path.resolve(__dirname, "./dist")
     },
+    plugins: [new HtmlWebpackPlugin()],
     // https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
     // https://webpack.js.org/guides/code-splitting/#splitchunksplugin
 
